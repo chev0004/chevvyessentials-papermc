@@ -1,0 +1,6 @@
+name: ChevvyEssentials
+version: '0.1.2'
+main: com.chevvy.ChevvyEssentials
+api-version: '1.21'
+description: A collection of essential commands for servers
+author: chevvy
