@@ -8,6 +8,7 @@ import com.chevvy.commands.teleport.TpaCommand;
 import com.chevvy.commands.teleport.TpaHereCommand;
 import com.chevvy.commands.vote.CvCommand;
 import com.chevvy.config.ModConfig;
+import com.chevvy.events.LeashProtectionHandler;
 import com.chevvy.events.PlayerDeathHandler;
 import com.chevvy.state.BackState;
 import com.chevvy.state.DeathState;
@@ -33,6 +34,7 @@ public class ChevvyEssentials extends JavaPlugin {
         DeathState.initialize();
         BackState.initialize();
         getServer().getPluginManager().registerEvents(new PlayerDeathHandler(), this);
+        getServer().getPluginManager().registerEvents(new LeashProtectionHandler(), this);
         VoteManager.initialize(this);
 
         this.getLifecycleManager().registerEventHandler(LifecycleEvents.COMMANDS, event -> {
