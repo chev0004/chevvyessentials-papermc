@@ -34,7 +34,7 @@ public class ChevvyEssentials extends JavaPlugin {
         DeathState.initialize();
         BackState.initialize();
         getServer().getPluginManager().registerEvents(new PlayerDeathHandler(), this);
-        getServer().getPluginManager().registerEvents(new LeashProtectionHandler(), this);
+        getServer().getPluginManager().registerEvents(new LeashProtectionHandler(this), this);
         VoteManager.initialize(this);
 
         this.getLifecycleManager().registerEventHandler(LifecycleEvents.COMMANDS, event -> {
